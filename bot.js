@@ -32,7 +32,7 @@ if (!GOOGLE_API_KEY || !TELEGRAM_BOT_TOKEN || !TELEGRAM_CHANNEL_ID) {
 // --- İstemcileri Başlat ---
 const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
 const model = genAI.getGenerativeModel({ /* ... önceki model ayarları ... */
-    model: "gemini-1.5-pro-latest",
+    model: "gemini-2.5-pro-experimental-03-25",
     generationConfig: { temperature: 0.7, topP: 0.95, topK: 40, maxOutputTokens: 2048 },
     safetySettings: [
         { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
